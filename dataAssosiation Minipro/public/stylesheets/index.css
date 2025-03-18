@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+label{
+    display: block;
+    margin-left: 40;
+}
+fieldset{
+    width: 450px;
+    border-radius: 20px;
+    background-color: rgba(26, 157, 142, 0.414);
+    backdrop-filter: blur(10px);
+    border: none;
+    height: 600px;
+    padding: 12px 4px 12px 30px;
+    filter: drop-shadow(1px 1px 20px rgb(17, 209, 103));
+}
+fieldset h1{
+    text-align: center;
+    margin-right: 20px; 
+    filter: drop-shadow(1px 3px 2px white); 
+}
+ header h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    filter: drop-shadow(1px 1px 2px white);
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 4rem 13rem;
+}
+
+
+input[type="text"]
+,input[type="password"],
+input[type="email"],input[type="number"]{
+    display: block;
+    border-radius: 12px;
+    width: 90%;
+    margin: 10px 0px 38px 14px;
+    padding: 15px 0px 15px 20px;
+    font-size: 18px;
+    border: none;
+    
+}
+#sub{  
+      margin-left: 140px;
+      margin-top: 80px;
+    
+}
+input[type="submit"]{
+    text-wrap:inherit;
+    color:black;
+    font-size: 20px;
+    border-radius: 20px;
+    padding-left: 5px;
+    padding-right: 15px;
+    border-color: black;
+    border-width: 4px;
+    width: 35%;
+    height:40px;
+    margin-left: 1rem;
+    margin-right:2rem;
+}
+body{
+   
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5b48c29f9f8770367788f244/1611582700101-JMIIX69SHSXK1X96XE91/ke17ZwdGBToddI8pDm48kHKmDLrMZO7HHpcyjMqbzOMUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcBVek0a0L5ZzZO5sIOvWwrqKYA-dXl4sYwgdPtOa0B174TByWOce_SwawEQNsQ9Qi/ecommerce+marketing+strategy");
+    height: 100vh;
+    background-size: 100% 100%;
+} 
+  input[type="submit"]:active {
+    color: brown;  
+  }
+
+@keyframes float {
+    0%{opacity: 0;}
+    50%{opacity: 5;}
+    100%{opacity: 0;}
+}

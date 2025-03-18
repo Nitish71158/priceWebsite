@@ -1,0 +1,30 @@
+body{
+    background-color: rgba(54, 54, 54, 0.723);
+    padding: 10px;
+    height:max-content;
+    width:auto;
+    padding: 40px;
+}
+h3{
+    font-size: x-large;
+}
+.inp{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-color: black;
+    color: black;
+    
+    
+}
+.inp::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+.but{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-color: black;
+    color: black;
+    background-color:aqua;
+    
+}  

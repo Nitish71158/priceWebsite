@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="/stylesheets/login.css">
+  </head>
+  <body>
+    <header>
+      <h1>E KAIVA</h1>
+  </header>
+    <div class="flex flex-col items-center min-h-screen bg-zinc-900 p-10 text-white">
+      <form action="/login" method="post">
+        <fieldset>
+        <h1>LOGIN</h1>
+        <input class="block px-3 py-2 outline-none bg-transparent border-2 border-zinc-800 rounded-md" type="text" placeholder="username" name="username">
+        <input class="block px-3 py-2 outline-none bg-transparent border-2 border-zinc-800 rounded-md" type="email" placeholder="email" name="email">
+        <input class="block px-3 py-2 outline-none bg-transparent border-2 border-zinc-800 rounded-md" type="password" placeholder="password" pattern="[a-z0-5]{8,0}" name="password">
+        <input class="block px-3 py-2 rounded-md bg-blue-500" type="submit" value="Login acount">
+      </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
