@@ -9,6 +9,10 @@ const userSchema=mongoose.Schema({
     posts:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:"post"
-    }]
+    }],
+    date:{
+        type:Date,
+        default: Date.now
+    }
 })
 module.exports=mongoose.model("user",userSchema);

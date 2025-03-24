@@ -7,6 +7,9 @@
     <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
   </head>
   <body>
+    <header>
+      <h1>E KAIVA</h1>
+  </header>
     <div class="flex flex-col items-center min-h-screen bg-zinc-900 p-10 text-white">
 
       <form action="/register" method="post">
@@ -16,6 +19,7 @@
         <input class="block px-3 py-2 outline-none bg-transparent border-2 border-zinc-700 rounded-md mb-3" type="text" placeholder="username" name="username" required>
         <input class="block px-3 py-2 outline-none bg-transparent border-2 border-zinc-700 rounded-md mb-3" type="number" placeholder="age" name="age" required>
         <input class="block px-3 py-2 outline-none bg-transparent border-2 border-zinc-700 rounded-md mb-3" type="email" placeholder="email" name="email" required>
+        <input class="block px-3 py-2 outline-none bg-transparent border-2 border-zinc-700 rounded-md mb-3" type="date" placeholder="date" name="date" required>
         <input class="block px-3 py-2 outline-none bg-transparent border-2 border-zinc-700 rounded-md mb-3" type="password" placeholder="password" name="password" required>
         <input class="px-2 py-2 rounded-md bg-blue-500" type="submit" value="Creaete">
         <a class="bg-green-500 rounded-md px-3 py-2 text-sm inline-block ml-5" href="/login">if already exist/Login</a>

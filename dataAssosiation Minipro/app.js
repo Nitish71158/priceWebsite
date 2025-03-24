@@ -25,7 +25,7 @@ app.get("/logout",(req,res)=>{
     res.redirect("/");
 })
 
-// middleware
+//            (islogin)    middleware
 app.get("/profile",islogin,async (req,res)=>{
     let user=await userModel.findOne({email:req.user.email}).populate("posts");
     res.render("profile",{user});
@@ -61,7 +61,7 @@ app.post("/post",islogin,async (req,res)=>{
     res.redirect("/profile");
 })
 app.post("/register",async (req,res)=>{
-    let {email,password,name, username,age}=req.body;
+    let {email,password,name, username,age,date}=req.body;
     let user=await userModel.findOne({email:email});
     if(user){
         return res.status(300).send("user already exist");
@@ -84,13 +84,16 @@ app.post("/register",async (req,res)=>{
 })
 
 app.post("/login",async (req,res)=>{
-    let {email,password,username}=req.body;
+    let {email,password,username,date}=req.body;
     let user=await userModel.findOne({email:email});
     if(!user){
         return res.status(300).send("Plz Sign first ");
     }
-    if (req.body.username !== user.username) {
+    if (username !== user.username) {
         return res.status(400).send("Invalid username");
+    }
+    if (username !== user.date) {
+        return res.status(400).send("Invalid Time");
     }
     bcrypt.compare(password,user.password,(err,result)=>{
         if(result){

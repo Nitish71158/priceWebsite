@@ -39,7 +39,8 @@ form{
 
 input[type="text"]
 ,input[type="password"],
-input[type="email"]{
+input[type="email"],
+input[type="date"]{
     display: block;
     border-radius: 12px;
     width: 90%;
