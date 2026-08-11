@@ -84,16 +84,13 @@ app.post("/register",async (req,res)=>{
 })
 
 app.post("/login",async (req,res)=>{
-    let {email,password,username,date}=req.body;
+    let {email,password,username}=req.body;
     let user=await userModel.findOne({email:email});
     if(!user){
         return res.status(300).send("Plz Sign first ");
     }
     if (username !== user.username) {
         return res.status(400).send("Invalid username");
-    }
-    if (username !== user.date) {
-        return res.status(400).send("Invalid Time");
     }
     bcrypt.compare(password,user.password,(err,result)=>{
         if(result){
@@ -114,4 +111,6 @@ function islogin(req,res,next){
     }
 }
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log(`Express server running on port http://localhost:${3000}`);
+});
